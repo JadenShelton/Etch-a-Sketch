@@ -19,11 +19,11 @@ function createGrid(size) {
     }
 }
 
-createGrid(16);
-console.log(sketchPad.offsetWidth);
+window.addEventListener("load", () => {
+    createGrid(16);
+});
 
 function newGrid(size) {
     sketchPad.innerHTML = "";
     createGrid(size);
-    console.log(sketchPad.offsetWidth);
 }
