@@ -20,7 +20,7 @@ function createGrid(size) {
     }
 }
 
-createGrid(16);
+createGrid(3);
 
 function newGrid(size) {
     createGrid(size);
