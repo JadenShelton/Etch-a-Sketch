@@ -1,6 +1,13 @@
 const sketchPad = document.querySelector(".sketchPad");
 
+sketchPad.addEventListener("mouseover", (e) => {
+  if (e.target.classList.contains("gridBox")) {
+    e.target.style.backgroundColor = "black";
+  }
+});
+
 function createGrid(size) {
+    sketchPad.innerHTML = "";
     const totalBoxes = size * size;
     let calcBasis = (sketchPad.offsetWidth - 10) / size;
 
@@ -13,21 +20,8 @@ function createGrid(size) {
     }
 }
 
-function addListeners() {
-    const gridBoxes = document.querySelectorAll(".gridBox");
-    gridBoxes.forEach((gridBox) => {
-        gridBox.addEventListener("mouseenter", () => {
-            gridBox.style.backgroundColor = "black";
-        });
-    });
-}
-
-createGrid(16);
-addListeners();
-
+createGrid(3);
 
 function newGrid(size) {
-    sketchPad.innerHTML = "";
     createGrid(size);
-    addListeners();
 }
