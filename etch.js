@@ -1,6 +1,6 @@
 const sketchPad = document.querySelector(".sketchPad");
 
-sketchPad.addEventListener("mouseenter", (e) => {
+sketchPad.addEventListener("mouseover", (e) => {
     if(e.target.classList.contains("gridBox")) {
         e.target.style.backgroundColor = "black";
     }
@@ -22,8 +22,6 @@ function createGrid(size) {
 createGrid(16);
 
 function newGrid(size) {
-    gridBoxes.forEach((gridBox) => {
-        gridBox.remove();
-    });
+    sketchPad.innerHTML = "";
     createGrid(size);
 }
