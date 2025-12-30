@@ -20,8 +20,10 @@ function createGrid(size) {
 }
 
 createGrid(16);
+console.log(sketchPad.offsetWidth);
 
 function newGrid(size) {
     sketchPad.innerHTML = "";
     createGrid(size);
+    console.log(sketchPad.offsetWidth);
 }
